@@ -1,0 +1,259 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pistola Bersa Thunder 9mm",
+    "categoria": "Cortas",
+    "precio": 285000,
+    "stock": 12,
+    "imagen": "https://placehold.co/400x300?text=Bersa+Thunder",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Bersa+Thunder",
+      "https://placehold.co/400x300?text=Vista+Lateral",
+      "https://placehold.co/400x300?text=Detalle+Grip"
+    ],
+    "descripcion": "Pistola semiautomática de fabricación nacional. Ideal para defensa personal y tiro deportivo. Reconocida por su confiabilidad y durabilidad.",
+    "especificaciones": {
+      "calibre": "9mm Parabellum",
+      "peso": "800g",
+      "sistemaDisparo": "Doble acción",
+      "longitud": "175mm",
+      "capacidad": "17+1 cartuchos"
+    },
+    "envioGratis": true,
+    "condicion": "Nuevo",
+    "vendidos": 340
+  },
+  {
+    "id": 2,
+    "nombre": "Revólver Taurus .38 SPL",
+    "categoria": "Cortas",
+    "precio": 198000,
+    "stock": 8,
+    "imagen": "https://placehold.co/400x300?text=Taurus+38",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Taurus+38",
+      "https://placehold.co/400x300?text=Cilindro+Abierto"
+    ],
+    "descripcion": "Revólver compacto de 6 tiros, perfecto para defensa personal. Construcción robusta en acero inoxidable.",
+    "especificaciones": {
+      "calibre": ".38 Special",
+      "peso": "650g",
+      "sistemaDisparo": "Doble/simple acción",
+      "longitud": "158mm",
+      "capacidad": "6 cartuchos"
+    },
+    "envioGratis": false,
+    "condicion": "Nuevo",
+    "vendidos": 210
+  },
+  {
+    "id": 3,
+    "nombre": "Rifle Mossberg Patriot .308",
+    "categoria": "Largas",
+    "precio": 620000,
+    "stock": 5,
+    "imagen": "https://placehold.co/400x300?text=Mossberg+Patriot",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Mossberg+Patriot",
+      "https://placehold.co/400x300?text=Cerrojo+Detalle"
+    ],
+    "descripcion": "Rifle de cerrojo de alta precisión para caza mayor. Culata sintética con acabado mate y caño con recámara en frío.",
+    "especificaciones": {
+      "calibre": ".308 Winchester",
+      "peso": "3.1kg",
+      "sistemaDisparo": "Cerrojo",
+      "longitud": "1090mm",
+      "capacidad": "4+1 cartuchos"
+    },
+    "envioGratis": true,
+    "condicion": "Nuevo",
+    "vendidos": 87
+  },
+  {
+    "id": 4,
+    "nombre": "Escopeta Browning BPS 12/70",
+    "categoria": "Largas",
+    "precio": 480000,
+    "stock": 4,
+    "imagen": "https://placehold.co/400x300?text=Browning+BPS",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Browning+BPS"
+    ],
+    "descripcion": "Escopeta de corredera para caza y tiro al plato. Acción de corredera inferior exclusiva de Browning.",
+    "especificaciones": {
+      "calibre": "12/70",
+      "peso": "3.4kg",
+      "sistemaDisparo": "Corredera (Pump)",
+      "longitud": "1120mm",
+      "capacidad": "5+1 cartuchos"
+    },
+    "envioGratis": true,
+    "condicion": "Nuevo",
+    "vendidos": 65
+  },
+  {
+    "id": 5,
+    "nombre": "Munición 9mm FMJ x 50",
+    "categoria": "Munición",
+    "precio": 28000,
+    "stock": 200,
+    "imagen": "https://placehold.co/400x300?text=Municíon+9mm",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Municíon+9mm"
+    ],
+    "descripcion": "Caja de 50 cartuchos 9mm FMJ de 115gr. Ideal para entrenamiento y tiro deportivo. Fabricación consistente y confiable.",
+    "especificaciones": {
+      "calibre": "9mm Parabellum",
+      "peso": "115gr por proyectil",
+      "material": "Plomo con encamisado total"
+    },
+    "envioGratis": false,
+    "condicion": "Nuevo",
+    "vendidos": 1200
+  },
+  {
+    "id": 6,
+    "nombre": "Munición .308 Win SP x 20",
+    "categoria": "Munición",
+    "precio": 42000,
+    "stock": 150,
+    "imagen": "https://placehold.co/400x300?text=Municíon+308",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Municíon+308"
+    ],
+    "descripcion": "Caja de 20 cartuchos .308 Win punta blanda para caza mayor. Alta expansión y transferencia de energía.",
+    "especificaciones": {
+      "calibre": ".308 Winchester",
+      "peso": "150gr por proyectil",
+      "material": "Punta blanda (Soft Point)"
+    },
+    "envioGratis": false,
+    "condicion": "Nuevo",
+    "vendidos": 430
+  },
+  {
+    "id": 7,
+    "nombre": "Mira Telescópica Vortex Crossfire II 4-12x44",
+    "categoria": "Ópticas",
+    "precio": 310000,
+    "stock": 10,
+    "imagen": "https://placehold.co/400x300?text=Vortex+Crossfire",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Vortex+Crossfire",
+      "https://placehold.co/400x300?text=Retícula+Detalle"
+    ],
+    "descripcion": "Mira telescópica de aumento variable. Óptica multicoating, resistente al agua, polvo y niebla. Retícula V-Brite iluminada.",
+    "especificaciones": {
+      "calibre": "N/A",
+      "peso": "510g",
+      "longitud": "317mm",
+      "material": "Aluminio aeronáutico"
+    },
+    "envioGratis": true,
+    "condicion": "Nuevo",
+    "vendidos": 95
+  },
+  {
+    "id": 8,
+    "nombre": "Punto Rojo Bushnell TRS-25",
+    "categoria": "Ópticas",
+    "precio": 95000,
+    "stock": 18,
+    "imagen": "https://placehold.co/400x300?text=Bushnell+TRS25",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Bushnell+TRS25"
+    ],
+    "descripcion": "Mira de punto rojo compacta con 11 niveles de brillo. Ideal para tiro rápido a distancias cortas y medias.",
+    "especificaciones": {
+      "peso": "85g",
+      "longitud": "58mm",
+      "material": "Aluminio"
+    },
+    "envioGratis": true,
+    "condicion": "Nuevo",
+    "vendidos": 180
+  },
+  {
+    "id": 9,
+    "nombre": "Cuchillo Táctico Gerber StrongArm",
+    "categoria": "Cuchillería",
+    "precio": 85000,
+    "stock": 25,
+    "imagen": "https://placehold.co/400x300?text=Gerber+StrongArm",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Gerber+StrongArm",
+      "https://placehold.co/400x300?text=Funda+Incluida"
+    ],
+    "descripcion": "Cuchillo de hoja fija con filo parcialmente serrado. Mango con grip de caucho y funda MOLLE compatible.",
+    "especificaciones": {
+      "longitud": "119mm hoja / 241mm total",
+      "peso": "227g con funda",
+      "material": "Acero 420HC con recubrimiento cerámico"
+    },
+    "envioGratis": false,
+    "condicion": "Nuevo",
+    "vendidos": 320
+  },
+  {
+    "id": 10,
+    "nombre": "Navaja Benchmade Griptilian",
+    "categoria": "Cuchillería",
+    "precio": 125000,
+    "stock": 14,
+    "imagen": "https://placehold.co/400x300?text=Benchmade+Griptilian",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Benchmade+Griptilian"
+    ],
+    "descripcion": "Navaja plegable americana de alta gama con sistema AXIS Lock. Hoja de acero 154CM, extremadamente resistente.",
+    "especificaciones": {
+      "longitud": "91mm hoja / 210mm abierta",
+      "peso": "99g",
+      "material": "Acero 154CM + mango Noryl GTX"
+    },
+    "envioGratis": true,
+    "condicion": "Nuevo",
+    "vendidos": 150
+  },
+  {
+    "id": 11,
+    "nombre": "Pistola Glock 17 Gen 5",
+    "categoria": "Cortas",
+    "precio": 750000,
+    "stock": 3,
+    "imagen": "https://placehold.co/400x300?text=Glock+17+Gen5",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Glock+17+Gen5"
+    ],
+    "descripcion": "La pistola de servicio más confiable del mundo. Nueva en su quinta generación con cañón Marksman y sin muesca en el dedo.",
+    "especificaciones": {
+      "calibre": "9mm Parabellum",
+      "peso": "705g cargada",
+      "sistemaDisparo": "Simple acción (Safe Action)",
+      "longitud": "202mm",
+      "capacidad": "17+1 cartuchos"
+    },
+    "envioGratis": true,
+    "condicion": "Nuevo",
+    "vendidos": 55
+  },
+  {
+    "id": 12,
+    "nombre": "Munición .38 SPL SJHP x 50",
+    "categoria": "Munición",
+    "precio": 35000,
+    "stock": 180,
+    "imagen": "https://placehold.co/400x300?text=Municíon+38SPL",
+    "imagenes": [
+      "https://placehold.co/400x300?text=Municíon+38SPL"
+    ],
+    "descripcion": "Caja de 50 cartuchos .38 SPL punta hueca semi-encamisada. Alta expansión para defensa personal.",
+    "especificaciones": {
+      "calibre": ".38 Special",
+      "peso": "125gr por proyectil",
+      "material": "Punta hueca semi-encamisada (SJHP)"
+    },
+    "envioGratis": false,
+    "condicion": "Nuevo",
+    "vendidos": 890
+  }
+]
