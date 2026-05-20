@@ -1,0 +1,73 @@
+<div class="checkout-page">
+
+  <div class="exitoso" *ngIf="compraExitosa">
+    <div class="exitoso-card">
+      <div class="check">✓</div>
+      <h2>¡Compra exitosa!</h2>
+      <p>Tu pedido fue recibido y está siendo procesado.</p>
+      <p class="gracias">Gracias por elegir <strong>Armería SaintPablo</strong> 💚</p>
+      <a class="btn-volver" routerLink="/">Volver a la tienda</a>
+    </div>
+  </div>
+
+  <div class="formulario" *ngIf="!compraExitosa">
+    <h2 class="titulo">Finalizar compra</h2>
+
+    <div class="form-layout">
+      <div class="col-form">
+        <div class="seccion">
+          <h3>Datos de envío</h3>
+          <div class="campo">
+            <label>Nombre completo</label>
+            <input type="text" [(ngModel)]="nombre" placeholder="Juan Pérez" />
+          </div>
+          <div class="campo">
+            <label>Dirección</label>
+            <input type="text" [(ngModel)]="direccion" placeholder="Calle 123, Villa de Soto" />
+          </div>
+        </div>
+
+        <div class="seccion">
+          <h3>Método de pago</h3>
+          <div class="pago-opciones">
+            <label class="pago-opcion" [class.activa]="pago === 'efectivo'">
+              <input type="radio" [(ngModel)]="pago" value="efectivo" />
+              💵 Efectivo
+            </label>
+            <label class="pago-opcion" [class.activa]="pago === 'tarjeta'">
+              <input type="radio" [(ngModel)]="pago" value="tarjeta" />
+              💳 Tarjeta
+            </label>
+            <label class="pago-opcion" [class.activa]="pago === 'transferencia'">
+              <input type="radio" [(ngModel)]="pago" value="transferencia" />
+              🏦 Transferencia
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-resumen">
+        <div class="resumen">
+          <h3>Resumen</h3>
+          <div class="resumen-fila">
+            <span>Total</span>
+            <span>$ {{ total | number:'1.0-0' }}</span>
+          </div>
+          <div class="resumen-fila">
+            <span>Envío</span>
+            <span class="gratis">Gratis</span>
+          </div>
+          <div class="resumen-fila total">
+            <span>A pagar</span>
+            <span>$ {{ total | number:'1.0-0' }}</span>
+          </div>
+          <button class="btn-confirmar" (click)="confirmar()">
+            Confirmar compra
+          </button>
+          <a class="btn-volver-carrito" routerLink="/carrito">Volver al carrito</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
