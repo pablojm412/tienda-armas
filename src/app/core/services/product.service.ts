@@ -33,4 +33,10 @@ export class ProductService {
   getCategorias(): string[] {
     return [...new Set(this.products.map(p => p.categoria))];
   }
+
+  getCuotas(precio: number): { cantidad: number; valorCuota: number } {
+    const cantidad = precio > 150000 ? 12 : 6;
+    const valorCuota = Math.round(precio / cantidad);
+    return { cantidad, valorCuota };
+  }
 }

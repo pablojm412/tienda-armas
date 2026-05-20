@@ -1,0 +1,17 @@
+<div class="product-card" [routerLink]="['/producto', product.id]">
+  <div class="card-img">
+    <img [src]="product.imagen" [alt]="product.nombre" />
+  </div>
+
+  <div class="card-body">
+    <p class="envio" [class.gratis]="product.envioGratis">
+      {{ product.envioGratis ? '🚚 Envío gratis' : 'Sin envío gratis' }}
+    </p>
+    <p class="card-name">{{ product.nombre }}</p>
+    <p class="card-price">{{ product.precio | currency:'ARS':'symbol':'1.0-0' }}</p>
+    <p class="card-cuotas">
+      en {{ cuotas.cantidad }}x {{ cuotas.valorCuota | currency:'ARS':'symbol':'1.0-0' }}
+    </p>
+    <p class="card-vendidos" *ngIf="product.vendidos">{{ product.vendidos }} vendidos</p>
+  </div>
+</div>

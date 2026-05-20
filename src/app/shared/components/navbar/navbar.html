@@ -1,0 +1,38 @@
+<nav class="navbar">
+  <div class="navbar-top">
+    <a class="logo-wrap" routerLink="/">
+      <div class="logo-icon">🎯</div>
+      <div class="logo-text">
+        <span class="logo-nombre">SaintPablo</span>
+        <span class="logo-sub">Armería</span>
+      </div>
+    </a>
+
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Pistolas, rifles, munición..." />
+    </div>
+
+    <div class="nav-actions">
+      <div class="nav-action">
+        <span>👤</span>
+        <span>Ingresar</span>
+      </div>
+      <div class="nav-action cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
+        <span>Carrito</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-bottom">
+    <span
+      *ngFor="let cat of categorias"
+      class="nav-cat"
+      [class.active]="cat === categoriaActiva"
+      (click)="seleccionarCategoria(cat)"
+    >{{ cat }}</span>
+    <span class="nav-cat">Ofertas</span>
+  </div>
+</nav>
