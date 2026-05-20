@@ -7,7 +7,7 @@ import productsData from '../../data/products.mock.json';
 })
 export class ProductService {
 
-  private products: Product[] = productsData as Product[];
+  private products: Product[] = productsData as unknown as Product[];
 
   getAll(): Product[] {
     return this.products;

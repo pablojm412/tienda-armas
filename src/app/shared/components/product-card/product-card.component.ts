@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Product } from '../../models/product.model';
@@ -15,7 +15,7 @@ export class ProductCardComponent implements OnInit {
   @Input() product!: Product;
   cuotas = { cantidad: 12, valorCuota: 0 };
 
-  constructor(private productService: ProductService) {}
+  private productService = inject(ProductService);
 
   ngOnInit() {
     this.cuotas = this.productService.getCuotas(this.product.precio);

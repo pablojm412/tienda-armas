@@ -1,0 +1,50 @@
+<div class="cart-page">
+  <h2 class="titulo">Tu carrito</h2>
+  <div class="cart-layout" *ngIf="items.length > 0; else vacio">
+    <div class="lista">
+      <div class="cart-item" *ngFor="let item of items">
+        <img [src]="item.product.imagen" [alt]="item.product.nombre" />
+        <div class="item-info">
+          <p class="item-nombre">{{ item.product.nombre }}</p>
+          <p class="item-precio">$ {{ item.product.precio | number:'1.0-0' }}</p>
+          <p class="item-envio" [class.gratis]="item.product.envioGratis">
+            {{ item.product.envioGratis ? '🚚 Envío gratis' : 'Sin envío gratis' }}
+          </p>
+        </div>
+        <div class="item-cantidad">
+          <button (click)="actualizarCantidad(item.product.id, item.cantidad - 1)"
+            [disabled]="item.cantidad <= 1">−</button>
+          <span>{{ item.cantidad }}</span>
+          <button (click)="actualizarCantidad(item.product.id, item.cantidad + 1)">+</button>
+        </div>
+        <div class="item-subtotal">
+          <p>$ {{ item.product.precio * item.cantidad | number:'1.0-0' }}</p>
+          <button class="btn-eliminar" (click)="eliminar(item.product.id)">🗑 Eliminar</button>
+        </div>
+      </div>
+    </div>
+    <div class="resumen">
+      <h3>Resumen de compra</h3>
+      <div class="resumen-fila">
+        <span>Subtotal</span>
+        <span>$ {{ getTotal() | number:'1.0-0' }}</span>
+      </div>
+      <div class="resumen-fila">
+        <span>Envío</span>
+        <span class="gratis">Gratis</span>
+      </div>
+      <div class="resumen-fila total">
+        <span>Total</span>
+        <span>$ {{ getTotal() | number:'1.0-0' }}</span>
+      </div>
+      <a class="btn-checkout" routerLink="/checkout">Continuar compra</a>
+      <a class="btn-seguir" routerLink="/">Seguir comprando</a>
+    </div>
+  </div>
+  <ng-template #vacio>
+    <div class="vacio">
+      <p>Tu carrito está vacío.</p>
+      <a routerLink="/">Ir a la tienda</a>
+    </div>
+  </ng-template>
+</div>
