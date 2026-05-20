@@ -9,7 +9,7 @@ import { ProductService } from '../../../core/services/product.service';
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './product-card.component.html',
-  styleUrl: './product-card.component.scss'
+  styleUrl: './product-card.component.css'
 })
 export class ProductCardComponent implements OnInit {
   @Input() product!: Product;

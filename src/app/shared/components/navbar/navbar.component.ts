@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-navbar',
   standalone: true,
   imports: [RouterLink, CommonModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  templateUrl: './navbar.html',
+  styleUrl: './navbar.css'
 })
 export class NavbarComponent {
   categorias = ['Cortas', 'Largas', 'Munición', 'Ópticas', 'Cuchillería'];
