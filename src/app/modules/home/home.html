@@ -1,0 +1,26 @@
+<div class="home">
+
+  <div class="banner">
+    <div class="banner-content">
+      <h1>Armería SaintPablo</h1>
+      <p>Las mejores armas al mejor precio — Villa de Soto, Córdoba</p>
+    </div>
+  </div>
+
+  <div class="categorias-grid">
+    <div class="cat-card" *ngFor="let cat of categorias">
+      <span>{{ cat }}</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Destacados</h2>
+    <div class="products-grid">
+      <app-product-card
+        *ngFor="let producto of productos"
+        [product]="producto"
+      ></app-product-card>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,68 @@
+.home {
+  background: #1a1a1a;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.banner {
+  background: linear-gradient(135deg, #111 0%, #1a2e0f 50%, #111 100%);
+  border-bottom: 2px solid #4a7c2f;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #d4f0a0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.banner-content p {
+  font-size: 14px;
+  color: #7a9e5a;
+}
+
+.categorias-grid {
+  display: flex;
+  gap: 10px;
+  padding: 20px 24px;
+  overflow-x: auto;
+}
+
+.cat-card {
+  background: #222;
+  border: 0.5px solid #4a7c2f;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #d4f0a0;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.cat-card:hover {
+  background: #2a3d1a;
+}
+
+.section {
+  padding: 0 24px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #d4f0a0;
+  border-left: 3px solid #4a7c2f;
+  padding-left: 10px;
+  margin-bottom: 16px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
