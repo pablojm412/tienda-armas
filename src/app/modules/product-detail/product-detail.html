@@ -1,0 +1,88 @@
+<div class="detail-page" *ngIf="product; else noEncontrado">
+
+  <div class="breadcrumb">
+    <a routerLink="/">Inicio</a> › {{ product.categoria }} › {{ product.nombre }}
+  </div>
+
+  <div class="detail-layout">
+
+    <div class="col-izquierda">
+      <div class="imagen-principal">
+        <img [src]="imagenActiva" [alt]="product.nombre" />
+      </div>
+      <div class="miniaturas" *ngIf="product.imagenes && product.imagenes.length > 1">
+        <img
+          *ngFor="let img of product.imagenes"
+          [src]="img"
+          [class.activa]="img === imagenActiva"
+          (click)="cambiarImagen(img)"
+        />
+      </div>
+      <div class="descripcion">
+        <h3>Descripción</h3>
+        <p>{{ product.descripcion }}</p>
+      </div>
+      <div class="especificaciones">
+        <h3>Especificaciones</h3>
+        <table>
+          <tr *ngIf="product.especificaciones.calibre">
+            <td>Calibre</td><td>{{ product.especificaciones.calibre }}</td>
+          </tr>
+          <tr *ngIf="product.especificaciones.peso">
+            <td>Peso</td><td>{{ product.especificaciones.peso }}</td>
+          </tr>
+          <tr *ngIf="product.especificaciones.sistemaDisparo">
+            <td>Sistema de disparo</td><td>{{ product.especificaciones.sistemaDisparo }}</td>
+          </tr>
+          <tr *ngIf="product.especificaciones.longitud">
+            <td>Longitud</td><td>{{ product.especificaciones.longitud }}</td>
+          </tr>
+          <tr *ngIf="product.especificaciones.capacidad">
+            <td>Capacidad</td><td>{{ product.especificaciones.capacidad }}</td>
+          </tr>
+          <tr *ngIf="product.especificaciones.material">
+            <td>Material</td><td>{{ product.especificaciones.material }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-derecha">
+      <div class="caja-compra">
+        <span class="condicion">{{ product.condicion }}</span>
+        <h1 class="producto-nombre">{{ product.nombre }}</h1>
+        <p class="vendidos" *ngIf="product.vendidos">{{ product.vendidos }} vendidos</p>
+
+        <div class="precio-wrap">
+          <p class="precio">$ {{ product.precio | number:'1.0-0' }}</p>
+          <p class="cuotas">en {{ cuotas.cantidad }}x $ {{ cuotas.valorCuota | number:'1.0-0' }}</p>
+        </div>
+
+        <p class="envio" [class.gratis]="product.envioGratis">
+          {{ product.envioGratis ? '🚚 Envío gratis' : 'Sin envío gratis' }}
+        </p>
+
+        <p class="stock">Stock disponible: {{ product.stock }} unidades</p>
+
+        <div class="cantidad-selector">
+          <span>Cantidad:</span>
+          <button (click)="decrementar()">−</button>
+          <span class="cantidad-num">{{ cantidad }}</span>
+          <button (click)="incrementar()">+</button>
+        </div>
+
+        <button class="btn-comprar">Comprar ahora</button>
+        <button class="btn-carrito">Agregar al carrito</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<ng-template #noEncontrado>
+  <div class="no-encontrado">
+    <p>Producto no encontrado.</p>
+    <a routerLink="/">Volver al inicio</a>
+  </div>
+</ng-template>
