@@ -5,12 +5,8 @@
     "categoria": "Cortas",
     "precio": 285000,
     "stock": 12,
-    "imagen": "https://placehold.co/400x300?text=Bersa+Thunder",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Bersa+Thunder",
-      "https://placehold.co/400x300?text=Vista+Lateral",
-      "https://placehold.co/400x300?text=Detalle+Grip"
-    ],
+    "imagen": "assets/images/Bersa.jpg",
+    "imagenes": ["assets/images/Bersa.jpg"],
     "descripcion": "Pistola semiautomática de fabricación nacional. Ideal para defensa personal y tiro deportivo. Reconocida por su confiabilidad y durabilidad.",
     "especificaciones": {
       "calibre": "9mm Parabellum",
@@ -29,11 +25,8 @@
     "categoria": "Cortas",
     "precio": 198000,
     "stock": 8,
-    "imagen": "https://placehold.co/400x300?text=Taurus+38",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Taurus+38",
-      "https://placehold.co/400x300?text=Cilindro+Abierto"
-    ],
+    "imagen": "assets/images/revolver.jpg",
+    "imagenes": ["assets/images/revolver.jpg"],
     "descripcion": "Revólver compacto de 6 tiros, perfecto para defensa personal. Construcción robusta en acero inoxidable.",
     "especificaciones": {
       "calibre": ".38 Special",
@@ -52,11 +45,8 @@
     "categoria": "Largas",
     "precio": 620000,
     "stock": 5,
-    "imagen": "https://placehold.co/400x300?text=Mossberg+Patriot",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Mossberg+Patriot",
-      "https://placehold.co/400x300?text=Cerrojo+Detalle"
-    ],
+    "imagen": "assets/images/Mossberg.jpg",
+    "imagenes": ["assets/images/Mossberg.jpg"],
     "descripcion": "Rifle de cerrojo de alta precisión para caza mayor. Culata sintética con acabado mate y caño con recámara en frío.",
     "especificaciones": {
       "calibre": ".308 Winchester",
@@ -75,10 +65,8 @@
     "categoria": "Largas",
     "precio": 480000,
     "stock": 4,
-    "imagen": "https://placehold.co/400x300?text=Browning+BPS",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Browning+BPS"
-    ],
+    "imagen": "assets/images/escopeta.jpg",
+    "imagenes": ["assets/images/escopeta.jpg"],
     "descripcion": "Escopeta de corredera para caza y tiro al plato. Acción de corredera inferior exclusiva de Browning.",
     "especificaciones": {
       "calibre": "12/70",
@@ -97,11 +85,9 @@
     "categoria": "Munición",
     "precio": 28000,
     "stock": 200,
-    "imagen": "https://placehold.co/400x300?text=Municíon+9mm",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Municíon+9mm"
-    ],
-    "descripcion": "Caja de 50 cartuchos 9mm FMJ de 115gr. Ideal para entrenamiento y tiro deportivo. Fabricación consistente y confiable.",
+    "imagen": "assets/images/municion9.jpg",
+    "imagenes": ["assets/images/municion9.jpg"],
+    "descripcion": "Caja de 50 cartuchos 9mm FMJ de 115gr. Ideal para entrenamiento y tiro deportivo.",
     "especificaciones": {
       "calibre": "9mm Parabellum",
       "peso": "115gr por proyectil",
@@ -117,10 +103,8 @@
     "categoria": "Munición",
     "precio": 42000,
     "stock": 150,
-    "imagen": "https://placehold.co/400x300?text=Municíon+308",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Municíon+308"
-    ],
+    "imagen": "assets/images/municion308.jpg",
+    "imagenes": ["assets/images/municion308.jpg"],
     "descripcion": "Caja de 20 cartuchos .308 Win punta blanda para caza mayor. Alta expansión y transferencia de energía.",
     "especificaciones": {
       "calibre": ".308 Winchester",
@@ -137,14 +121,10 @@
     "categoria": "Ópticas",
     "precio": 310000,
     "stock": 10,
-    "imagen": "https://placehold.co/400x300?text=Vortex+Crossfire",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Vortex+Crossfire",
-      "https://placehold.co/400x300?text=Retícula+Detalle"
-    ],
-    "descripcion": "Mira telescópica de aumento variable. Óptica multicoating, resistente al agua, polvo y niebla. Retícula V-Brite iluminada.",
+    "imagen": "assets/images/mira.jpg",
+    "imagenes": ["assets/images/mira.jpg"],
+    "descripcion": "Mira telescópica de aumento variable. Óptica multicoating, resistente al agua, polvo y niebla.",
     "especificaciones": {
-      "calibre": "N/A",
       "peso": "510g",
       "longitud": "317mm",
       "material": "Aluminio aeronáutico"
@@ -159,10 +139,8 @@
     "categoria": "Ópticas",
     "precio": 95000,
     "stock": 18,
-    "imagen": "https://placehold.co/400x300?text=Bushnell+TRS25",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Bushnell+TRS25"
-    ],
+    "imagen": "assets/images/miraroja.jpg",
+    "imagenes": ["assets/images/miraroja.jpg"],
     "descripcion": "Mira de punto rojo compacta con 11 niveles de brillo. Ideal para tiro rápido a distancias cortas y medias.",
     "especificaciones": {
       "peso": "85g",
@@ -179,11 +157,8 @@
     "categoria": "Cuchillería",
     "precio": 85000,
     "stock": 25,
-    "imagen": "https://placehold.co/400x300?text=Gerber+StrongArm",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Gerber+StrongArm",
-      "https://placehold.co/400x300?text=Funda+Incluida"
-    ],
+    "imagen": "assets/images/cuchillo.jpg",
+    "imagenes": ["assets/images/cuchillo.jpg"],
     "descripcion": "Cuchillo de hoja fija con filo parcialmente serrado. Mango con grip de caucho y funda MOLLE compatible.",
     "especificaciones": {
       "longitud": "119mm hoja / 241mm total",
@@ -200,11 +175,9 @@
     "categoria": "Cuchillería",
     "precio": 125000,
     "stock": 14,
-    "imagen": "https://placehold.co/400x300?text=Benchmade+Griptilian",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Benchmade+Griptilian"
-    ],
-    "descripcion": "Navaja plegable americana de alta gama con sistema AXIS Lock. Hoja de acero 154CM, extremadamente resistente.",
+    "imagen": "assets/images/navaja.jpg",
+    "imagenes": ["assets/images/navaja.jpg"],
+    "descripcion": "Navaja plegable americana de alta gama con sistema AXIS Lock. Hoja de acero 154CM.",
     "especificaciones": {
       "longitud": "91mm hoja / 210mm abierta",
       "peso": "99g",
@@ -220,11 +193,9 @@
     "categoria": "Cortas",
     "precio": 750000,
     "stock": 3,
-    "imagen": "https://placehold.co/400x300?text=Glock+17+Gen5",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Glock+17+Gen5"
-    ],
-    "descripcion": "La pistola de servicio más confiable del mundo. Nueva en su quinta generación con cañón Marksman y sin muesca en el dedo.",
+    "imagen": "assets/images/glock.jpg",
+    "imagenes": ["assets/images/glock.jpg"],
+    "descripcion": "La pistola de servicio más confiable del mundo. Nueva en su quinta generación con cañón Marksman.",
     "especificaciones": {
       "calibre": "9mm Parabellum",
       "peso": "705g cargada",
@@ -242,10 +213,8 @@
     "categoria": "Munición",
     "precio": 35000,
     "stock": 180,
-    "imagen": "https://placehold.co/400x300?text=Municíon+38SPL",
-    "imagenes": [
-      "https://placehold.co/400x300?text=Municíon+38SPL"
-    ],
+    "imagen": "assets/images/Municion38.jpg",
+    "imagenes": ["assets/images/Municion38.jpg"],
     "descripcion": "Caja de 50 cartuchos .38 SPL punta hueca semi-encamisada. Alta expansión para defensa personal.",
     "especificaciones": {
       "calibre": ".38 Special",
