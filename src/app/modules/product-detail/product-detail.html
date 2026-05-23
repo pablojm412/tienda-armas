@@ -72,10 +72,22 @@
         </div>
 
         <button class="btn-comprar" (click)="comprarAhora()">Comprar ahora</button>
-      <button class="btn-carrito" (click)="agregarAlCarrito()">{{ agregado ? '✓ Agregado al carrito' : 'Agregar al carrito' }}</button>
+        <button class="btn-carrito" (click)="agregarAlCarrito()">
+          {{ agregado ? '✓ Agregado al carrito' : 'Agregar al carrito' }}
+        </button>
       </div>
     </div>
 
+  </div>
+
+  <div class="relacionados" *ngIf="relacionados.length > 0">
+    <h3 class="relacionados-titulo">Productos relacionados</h3>
+    <div class="relacionados-grid">
+      <app-product-card
+        *ngFor="let p of relacionados"
+        [product]="p"
+      ></app-product-card>
+    </div>
   </div>
 
 </div>

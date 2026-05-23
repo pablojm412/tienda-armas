@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink, Router } from '@angular/router';
 import { ProductService } from '../../core/services/product.service';
 import { CartService } from '../../core/services/cart';
+import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
 
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, ProductCardComponent],
   templateUrl: './product-detail.html',
   styleUrl: './product-detail.css'
 })
@@ -17,6 +18,7 @@ export class ProductDetailComponent implements OnInit {
   cantidad = 1;
   imagenActiva = '';
   agregado = false;
+  relacionados: any[] = [];
 
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
@@ -24,12 +26,18 @@ export class ProductDetailComponent implements OnInit {
   private router = inject(Router);
 
   ngOnInit() {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.product = this.productService.getById(id);
-    if (this.product) {
-      this.cuotas = this.productService.getCuotas(this.product.precio);
-      this.imagenActiva = this.product.imagen;
-    }
+    this.route.params.subscribe(params => {
+      const id = Number(params['id']);
+      this.product = this.productService.getById(id);
+      if (this.product) {
+        this.cuotas = this.productService.getCuotas(this.product.precio);
+        this.imagenActiva = this.product.imagen;
+        this.relacionados = this.productService
+          .getByCategoria(this.product.categoria)
+          .filter(p => p.id !== this.product.id)
+          .slice(0, 4);
+      }
+    });
   }
 
   cambiarImagen(img: string) { this.imagenActiva = img; }

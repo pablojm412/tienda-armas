@@ -227,3 +227,23 @@
 .no-encontrado a {
   color: #5aab35;
 }
+.relacionados {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 0.5px solid #2a2a2a;
+}
+
+.relacionados-titulo {
+  font-size: 16px;
+  font-weight: 500;
+  color: #d4f0a0;
+  border-left: 3px solid #4a7c2f;
+  padding-left: 10px;
+  margin-bottom: 16px;
+}
+
+.relacionados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
