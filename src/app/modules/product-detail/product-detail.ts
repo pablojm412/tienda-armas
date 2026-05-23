@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink, Router } from '@angular/router';
 import { ProductService } from '../../core/services/product.service';
 import { CartService } from '../../core/services/cart';
 
@@ -21,6 +21,7 @@ export class ProductDetailComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
   private cartService = inject(CartService);
+  private router = inject(Router);
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -40,6 +41,13 @@ export class ProductDetailComponent implements OnInit {
       this.cartService.agregar(this.product, this.cantidad);
       this.agregado = true;
       setTimeout(() => this.agregado = false, 2000);
+    }
+  }
+
+  comprarAhora() {
+    if (this.product) {
+      this.cartService.agregar(this.product, this.cantidad);
+      this.router.navigate(['/checkout']);
     }
   }
 }
