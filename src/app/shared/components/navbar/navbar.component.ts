@@ -21,8 +21,9 @@ export class NavbarComponent {
   private router = inject(Router);
 
   seleccionarCategoria(cat: string) {
-    this.categoriaActiva = cat;
-  }
+  this.categoriaActiva = cat;
+  this.router.navigate(['/productos'], { queryParams: { categoria: cat } });
+}
 
   logout() {
     this.authService.logout();

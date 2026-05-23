@@ -14,6 +14,7 @@ import { ProductCardComponent } from '../../shared/components/product-card/produ
 export class ProductsComponent implements OnInit {
   productos: any[] = [];
   query = '';
+  esBusqueda = false;
 
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
@@ -21,8 +22,14 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.query = params['q'] || '';
+      const categoria = params['categoria'] || '';
       if (this.query) {
+        this.esBusqueda = true;
         this.productos = this.productService.search(this.query);
+      } else if (categoria) {
+        this.esBusqueda = false;
+        this.query = categoria;
+        this.productos = this.productService.getByCategoria(categoria);
       } else {
         this.productos = this.productService.getAll();
       }
