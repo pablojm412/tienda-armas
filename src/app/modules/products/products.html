@@ -24,16 +24,28 @@
       <button class="btn-limpiar" (click)="limpiarFiltros()">Limpiar filtros</button>
     </div>
 
-    <div class="products-grid" *ngIf="productosFiltrados.length > 0">
-      <app-product-card
-        *ngFor="let producto of productosFiltrados"
-        [product]="producto"
-      ></app-product-card>
-    </div>
+    <div class="col-productos">
+      <div class="ordenar">
+        <span>Ordenar por:</span>
+        <select [(ngModel)]="orden" (ngModelChange)="aplicarFiltros()">
+          <option value="relevancia">Relevancia</option>
+          <option value="menor">Menor precio</option>
+          <option value="mayor">Mayor precio</option>
+          <option value="vendidos">Más vendidos</option>
+        </select>
+      </div>
 
-    <div class="sin-resultados" *ngIf="productosFiltrados.length === 0">
-      <p>No se encontraron productos con ese rango de precio.</p>
-      <button class="btn-limpiar" (click)="limpiarFiltros()">Limpiar filtros</button>
+      <div class="products-grid" *ngIf="productosFiltrados.length > 0">
+        <app-product-card
+          *ngFor="let producto of productosFiltrados"
+          [product]="producto"
+        ></app-product-card>
+      </div>
+
+      <div class="sin-resultados" *ngIf="productosFiltrados.length === 0">
+        <p>No se encontraron productos con ese rango de precio.</p>
+        <button class="btn-limpiar" (click)="limpiarFiltros()">Limpiar filtros</button>
+      </div>
     </div>
   </div>
 </div>

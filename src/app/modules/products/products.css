@@ -111,3 +111,27 @@
   align-items: center;
   gap: 16px;
 }
+.col-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ordenar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.ordenar select {
+  padding: 6px 10px;
+  background: #222;
+  border: 0.5px solid #4a7c2f;
+  border-radius: 6px;
+  color: #d4f0a0;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}

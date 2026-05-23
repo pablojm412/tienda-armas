@@ -19,6 +19,7 @@ export class ProductsComponent implements OnInit {
   esBusqueda = false;
   precioMin: number | null = null;
   precioMax: number | null = null;
+  orden = 'relevancia';
 
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
@@ -42,16 +43,31 @@ export class ProductsComponent implements OnInit {
   }
 
   aplicarFiltros() {
-    this.productosFiltrados = this.productos.filter(p => {
+    let resultado = this.productos.filter(p => {
       const minOk = this.precioMin === null || p.precio >= this.precioMin;
       const maxOk = this.precioMax === null || p.precio <= this.precioMax;
       return minOk && maxOk;
     });
+
+    switch (this.orden) {
+      case 'menor':
+        resultado = resultado.sort((a, b) => a.precio - b.precio);
+        break;
+      case 'mayor':
+        resultado = resultado.sort((a, b) => b.precio - a.precio);
+        break;
+      case 'vendidos':
+        resultado = resultado.sort((a, b) => (b.vendidos || 0) - (a.vendidos || 0));
+        break;
+    }
+
+    this.productosFiltrados = resultado;
   }
 
   limpiarFiltros() {
     this.precioMin = null;
     this.precioMax = null;
+    this.orden = 'relevancia';
     this.aplicarFiltros();
   }
 }
