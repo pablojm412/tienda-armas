@@ -7,17 +7,33 @@
       Categoría: <span>{{ query }}</span>
     </h2>
     <h2 class="titulo" *ngIf="!query">Todos los productos</h2>
-    <p class="cantidad">{{ productos.length }} productos encontrados</p>
+    <p class="cantidad">{{ productosFiltrados.length }} productos encontrados</p>
   </div>
 
-  <div class="products-grid" *ngIf="productos.length > 0">
-    <app-product-card
-      *ngFor="let producto of productos"
-      [product]="producto"
-    ></app-product-card>
-  </div>
+  <div class="layout">
+    <div class="filtros">
+      <h3>Filtrar por precio</h3>
+      <div class="filtro-campo">
+        <label>Precio mínimo</label>
+        <input type="number" [(ngModel)]="precioMin" placeholder="$ 0" (ngModelChange)="aplicarFiltros()" />
+      </div>
+      <div class="filtro-campo">
+        <label>Precio máximo</label>
+        <input type="number" [(ngModel)]="precioMax" placeholder="$ 999999" (ngModelChange)="aplicarFiltros()" />
+      </div>
+      <button class="btn-limpiar" (click)="limpiarFiltros()">Limpiar filtros</button>
+    </div>
 
-  <div class="sin-resultados" *ngIf="productos.length === 0">
-    <p>No se encontraron productos para "{{ query }}"</p>
+    <div class="products-grid" *ngIf="productosFiltrados.length > 0">
+      <app-product-card
+        *ngFor="let producto of productosFiltrados"
+        [product]="producto"
+      ></app-product-card>
+    </div>
+
+    <div class="sin-resultados" *ngIf="productosFiltrados.length === 0">
+      <p>No se encontraron productos con ese rango de precio.</p>
+      <button class="btn-limpiar" (click)="limpiarFiltros()">Limpiar filtros</button>
+    </div>
   </div>
 </div>
