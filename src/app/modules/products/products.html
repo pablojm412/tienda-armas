@@ -1,0 +1,20 @@
+<div class="products-page">
+  <div class="header">
+    <h2 class="titulo" *ngIf="query">
+      Resultados para: <span>"{{ query }}"</span>
+    </h2>
+    <h2 class="titulo" *ngIf="!query">Todos los productos</h2>
+    <p class="cantidad">{{ productos.length }} productos encontrados</p>
+  </div>
+
+  <div class="products-grid" *ngIf="productos.length > 0">
+    <app-product-card
+      *ngFor="let producto of productos"
+      [product]="producto"
+    ></app-product-card>
+  </div>
+
+  <div class="sin-resultados" *ngIf="productos.length === 0">
+    <p>No se encontraron productos para "{{ query }}"</p>
+  </div>
+</div>

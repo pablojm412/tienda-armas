@@ -9,9 +9,14 @@
     </a>
 
     <div class="search-bar">
-      <span class="search-icon">🔍</span>
-      <input type="text" placeholder="Pistolas, rifles, munición..." />
-    </div>
+  <span class="search-icon" (click)="buscar()" style="cursor:pointer">🔍</span>
+  <input
+    type="text"
+    placeholder="Pistolas, rifles, munición..."
+    [(ngModel)]="busqueda"
+    (keydown)="buscarEnter($event)"
+  />
+</div>
 
     <div class="nav-actions">
       <ng-container *ngIf="!authService.estaLogueado()">
