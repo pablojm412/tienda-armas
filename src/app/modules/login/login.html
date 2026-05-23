@@ -1,0 +1,31 @@
+<div class="login-page">
+  <div class="login-card">
+
+    <div class="login-logo">
+      <div class="logo-icon">🎯</div>
+      <div class="logo-text">
+        <span class="logo-nombre">SaintPablo</span>
+        <span class="logo-sub">Armería</span>
+      </div>
+    </div>
+
+    <h2>Iniciar sesión</h2>
+
+    <div class="campo">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="email" placeholder="tu@email.com" />
+    </div>
+
+    <div class="campo">
+      <label>Contraseña</label>
+      <input type="password" [(ngModel)]="password" placeholder="••••••••" />
+    </div>
+
+    <p class="error" *ngIf="error">{{ error }}</p>
+
+    <button class="btn-login" (click)="login()">Ingresar</button>
+
+    <a class="btn-volver" routerLink="/">Volver a la tienda</a>
+
+  </div>
+</div>

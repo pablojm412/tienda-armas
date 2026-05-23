@@ -14,10 +14,22 @@
     </div>
 
     <div class="nav-actions">
-      <div class="nav-action">
-        <span>👤</span>
-        <span>Ingresar</span>
-      </div>
+      <ng-container *ngIf="!authService.estaLogueado()">
+        <div class="nav-action" routerLink="/login">
+          <span>👤</span>
+          <span>Ingresar</span>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="authService.estaLogueado()">
+        <div class="nav-action">
+          <span>👤</span>
+          <span>{{ authService.getUsuario()?.nombre }}</span>
+        </div>
+        <div class="nav-action" (click)="logout()">
+          <span>🚪</span>
+          <span>Salir</span>
+        </div>
+      </ng-container>
       <div class="nav-action cart" routerLink="/carrito">
         <span class="cart-icon">🛒</span>
         <span class="cart-badge" *ngIf="cartCount > 0">{{ cartCount }}</span>

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../../core/services/auth';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +15,13 @@ export class NavbarComponent {
   categoriaActiva = '';
   cartCount = 0;
 
+  authService = inject(AuthService);
+
   seleccionarCategoria(cat: string) {
     this.categoriaActiva = cat;
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }
