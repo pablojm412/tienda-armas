@@ -13,7 +13,7 @@ import { ProductCardComponent } from '../../shared/components/product-card/produ
 })
 export class HomeComponent implements OnInit {
   productos: Product[] = [];
-  categorias = ['Cortas', 'Largas', 'Munición', 'Ópticas', 'Cuchillería'];
+  categorias = ['Cortas', 'Largas', 'Munición', 'Ópticas', 'Cuchillería', 'Accesorios'];
 
   constructor(private productService: ProductService) {}
 

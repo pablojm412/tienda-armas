@@ -224,5 +224,78 @@
     "envioGratis": false,
     "condicion": "Nuevo",
     "vendidos": 890
+    },
+  {
+    "id": 13,
+    "nombre": "Funda Bersa TPR9 Nivel 5",
+    "categoria": "Accesorios",
+    "precio": 45000,
+    "stock": 20,
+    "imagen": "assets/images/funda 1.webp",
+    "imagenes": ["assets/images/funda 1.webp"],
+    "descripcion": "Funda táctica nivel 5 para Bersa TPR9. Retención activa con sistema de seguridad de 3 pasos. Compatible con cinturón táctico.",
+    "especificaciones": {
+      "material": "Polímero ABS reforzado",
+      "peso": "280g",
+      "longitud": "220mm"
+    },
+    "envioGratis": true,
+    "condicion": "Nuevo",
+    "vendidos": 45
+  },
+  {
+    "id": 14,
+    "nombre": "Funda Glock 17 Nivel 3",
+    "categoria": "Accesorios",
+    "precio": 38000,
+    "stock": 15,
+    "imagen": "assets/images/funda 2.webp",
+    "imagenes": ["assets/images/funda 2.webp"],
+    "descripcion": "Funda táctica nivel 3 para Glock 17. Sistema de retención rotacional. Ideal para uso policial y táctico.",
+    "especificaciones": {
+      "material": "Polímero Kydex",
+      "peso": "220g",
+      "longitud": "210mm"
+    },
+    "envioGratis": true,
+    "condicion": "Nuevo",
+    "vendidos": 78
+  },
+  {
+    "id": 15,
+    "nombre": "Funda Táctica Universal Nivel 2",
+    "categoria": "Accesorios",
+    "precio": 25000,
+    "stock": 30,
+    "imagen": "assets/images/funda 3.webp",
+    "imagenes": ["assets/images/funda 3.webp"],
+    "descripcion": "Funda universal nivel 2 compatible con la mayoría de pistolas compactas. Retención por fricción ajustable.",
+    "especificaciones": {
+      "material": "Nylon 1000D",
+      "peso": "180g",
+      "longitud": "200mm"
+    },
+    "envioGratis": false,
+    "condicion": "Nuevo",
+    "vendidos": 120
+  },
+  {
+    "id": 16,
+    "nombre": "Funda Sobaquera Cuero Taurus .38",
+    "categoria": "Accesorios",
+    "precio": 32000,
+    "stock": 10,
+    "imagen": "assets/images/funda 4.webp",
+    "imagenes": ["assets/images/funda 4.webp"],
+    "descripcion": "Funda sobaquera de cuero genuino para Taurus .38. Diseño clásico para uso civil y policial.",
+    "especificaciones": {
+      "material": "Cuero genuino",
+      "peso": "320g",
+      "longitud": "190mm"
+    },
+    "envioGratis": false,
+    "condicion": "Nuevo",
+    "vendidos": 33
+  
   }
 ]

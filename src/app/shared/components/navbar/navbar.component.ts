@@ -12,7 +12,7 @@ import { AuthService } from '../../../core/services/auth';
   styleUrl: './navbar.css'
 })
 export class NavbarComponent {
-  categorias = ['Cortas', 'Largas', 'Munición', 'Ópticas', 'Cuchillería'];
+  categorias = ['Cortas', 'Largas', 'Munición', 'Ópticas', 'Cuchillería', 'Accesorios'];
   categoriaActiva = '';
   cartCount = 0;
   busqueda = '';
